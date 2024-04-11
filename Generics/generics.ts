@@ -26,3 +26,50 @@ product<Laptop>({
     model: "Vivobook",
     warranty: 1
 });
+
+// Take input as an array
+function getSearchProduct<T>(products: Array<T>): T {
+    return products[0];
+}
+
+const getProductId = <T>(products: Array<T>): T => {
+    return products[0];
+};
+
+function identityThree<T, U>(val1: T, val2: U): object {
+    return {
+        val1,
+        val2
+    };
+}
+
+identityThree(0, "Rakesh");
+
+
+interface Quiz {
+    name: string,
+    type: string;
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string;
+}
+
+class sellable<T> {
+    public cart: Array<T>;
+
+    addToCart(product: T) {
+        this.cart.push(product);
+    }
+}
+
+const sell = new sellable();
+const course: Course = {
+    name: "MERN",
+    author: "Hitesh",
+    subject: "TypeScript"
+};
+
+sell.addToCart(course);

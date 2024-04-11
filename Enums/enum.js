@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var SeatChoice;
 (function (SeatChoice) {
     SeatChoice[SeatChoice["AISLE"] = 0] = "AISLE";
